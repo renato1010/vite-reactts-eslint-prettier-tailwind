@@ -9,10 +9,19 @@
     }
   },
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "react": {
       "version": "detect"
     },
     "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      },
+      "alias": {
+        "map": [["@", "./src"]]
+      },
       "node": {
         "paths": ["src"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
@@ -29,10 +38,11 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended" // Make sure this is always the last element in the array.
   ],
-  "plugins": ["simple-import-sort", "prettier"],
+  "plugins": ["@typescript-eslint", "simple-import-sort", "prettier"],
   "rules": {
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
     "react/react-in-jsx-scope": "off",
