@@ -58,6 +58,7 @@
         "specialLink": ["hrefLeft", "hrefRight"],
         "aspects": ["invalidHref", "preferButton"]
       }
-    ]
+    ],
+    "import/default": "off"
   }
 }
